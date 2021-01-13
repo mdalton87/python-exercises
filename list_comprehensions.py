@@ -71,39 +71,60 @@ print(fruits_with_only_two_vowels)
 
 # Exercise 9 - Make a variable named fruits_with_letter_a that contains a list of only the fruits that contain the letter "a"
 
-
+substring = "a"
+fruits_with_letter_a = [fruit for fruit in fruits if substring in fruit.lower()]
 
 # Exercise 10 - Make a variable named even_numbers that holds only the even numbers 
 
-
+even_numbers = [n for n in numbers if n % 2 == 0]
+print(even_numbers)
 
 # Exercise 11 - Make a variable named odd_numbers that holds only the odd numbers
 
-
+odd_numbers = [n for n in numbers if n % 2 != 0]
+print(odd_numbers)
 
 # Exercise 12 - Make a variable named positive_numbers that holds only the positive numbers
 
-
+positive_numbers = [n for n in numbers if n > 0]
+print(positive_numbers)
 
 # Exercise 13 - Make a variable named negative_numbers that holds only the negative numbers
 
-
+negative_numbers = [n for n in numbers if n < 0]
+print(negative_numbers)
 
 # Exercise 14 - use a list comprehension w/ a conditional in order to produce a list of numbers with 2 or more numerals
 
+[n for n in numbers if n > 9]
 
 
 # Exercise 15 - Make a variable named numbers_squared that contains the numbers list with each element squared. Output is [4, 9, 16, etc...]
 
-
+numbers_squared = [n ** 2 for n in numbers]
+print(numbers_squared)
 
 # Exercise 16 - Make a variable named odd_negative_numbers that contains only the numbers that are both odd and negative.
 
-
+odd_negative_numbers = [n for n in numbers if n % 2 != 0 and n < 0]
+print(odd_negative_numbers)
 
 # Exercise 17 - Make a variable named numbers_plus_5. In it, return a list containing each number plus five. 
 
-
+numbers_plus_5 = [ n + 5 for n in numbers]
+print(numbers_plus_5)
 
 # BONUS Make a variable named "primes" that is a list containing the prime numbers in the numbers list. *Hint* you may want to make or find a helper function that determines if a given number is prime or not.
 
+def check_for_prime(num):
+    if num > 1:
+        for i in range(2, num):
+            if (num % i) == 0:
+                return False
+            else:
+                return True
+    else: 
+        return False
+        
+primes = [n for n in numbers if check_for_prime(n) == True]
+print(primes)
