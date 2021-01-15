@@ -52,10 +52,12 @@ def apply_discount(original_price, discount_percentage):
     else:
         return (original_price - (original_price * discount_percentage))
 
+# Define a function named handle_commas. 
+# It should accept a string that is a number that contains commas in it as input, and return a number as output.
 
-
-
-
+def handle_commas(num_string):
+    num_string = num_string.replace(",","")
+    return int(num_string)
 
 # Define a function named get_letter_grade. 
 # It should accept a number and return the letter grade associated with that number (A-F).
