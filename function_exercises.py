@@ -3,36 +3,28 @@
 # or the string 2, False otherwise.
 
 def is_two(x):
-    if x == 2 or x == "2":
-        return True
-    else:
-        return False
+    return x == 2 or x == "2"
 
 # Define a function named is_vowel. It should return True if the passed string is a vowel, False otherwise.
 
-def is_vowel(string):
-    string = string.lower()
-    for letter in string:
-        if letter in 'aeiou':
-            return True
-        else:
-            return False
+def is_vowel(c):
+    return c.lower() in 'aeiou'
 
 # Define a function named is_consonant. It should return True if the passed string is a consonant, False otherwise. Use your is_vowel function to accomplish this.
 
-def is_consonant(string):
-    string = string.lower()
-    for letter in string:
-        if letter not in 'aeiou':
-            return True
-        else:
-            return False
+def is_consonant(c):
+    return c.isalpha() and not is_vowel(c)
+ 
         
 # Define a function that accepts a string that is a word. 
 # The function should capitalize the first letter of the word if the word starts with a consonant.
 
-def will_capitalize(string):
-    return string.capitalize()
+def capitalize_if_consonant(string):
+    first_letter = string[0]
+    if is_consonant(first_letter):
+        return string.capitalize()
+    else:
+        return string
 
 # Define a function named calculate_tip. It should accept a tip percentage (a number between 0 and 1) 
 # and the bill total, and return the amount to tip.
@@ -56,8 +48,8 @@ def apply_discount(original_price, discount_percentage):
 # It should accept a string that is a number that contains commas in it as input, and return a number as output.
 
 def handle_commas(num_string):
-    num_string = num_string.replace(",","")
-    return int(num_string)
+    return float(num_string.replace(",",""))
+
 
 # Define a function named get_letter_grade. 
 # It should accept a number and return the letter grade associated with that number (A-F).
@@ -84,6 +76,11 @@ def remove_vowels(string):
         return remove_vowels(string[1:])
     return string[0] + remove_vowels(string[1:])
     
+# Short version
+def remove_vowel_small(string):
+    return "".join([c for c in string if not is_vowel(c)])
+
+
 # Define a function named normalize_name. 
 # It should accept a string and return a valid python identifier, that is:
 
