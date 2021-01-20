@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.16: http://docutils.sourceforge.net/" />
+<title>Python Assessment</title>
+<style type="text/css">
+
+* { box-sizing: border-box; font-family: sans-serif; }
+body { max-width: 960px; margin: 0 auto; padding: 0 5px; font-size: 16px; }
+h1 { margin-top: 0; }
+h2 { margin: 1em 0; }
+ul li, ol li { margin: 0.5em 0; }
+code, .docutils.literal { font-family: monaco, monospace; font-size: 1.05em; padding: 2px; border: 1px solid rgba(0, 0, 0, 0.05); }
+pre { font-family: monaco, monospace; padding: 5px 10px; background: rgb(240, 240, 240); line-height: 1.4em; overflow: scroll; }
+pre code { font-size: inherit; padding: 0; }
+em { font-style: normal; text-decoration: underline; }
+table thead th { vertical-align: bottom; border-bottom: 2px solid #dee2e6; }
+table td, table th { padding: .75rem; vertical-align: top; border-top: 1px solid #dee2e6; }
+table { width: 100%; max-width: 100%; margin-bottom: 1rem; background-color: transparent; }
+tr.odd { background-color: rgba(0, 0, 0, 0.03); }
+
+</style>
+</head>
+<body>
+<div class="document" id="python-assessment">
+<h1 class="title">Python Assessment</h1>
+
+<div class="section" id="instructions">
+<h1>Instructions</h1>
+<ol class="arabic simple" start="0">
+<li>Carefully read through the instructions and problems before beginning work.</li>
+<li>Do your work in a file named <tt class="docutils literal">solutions.py</tt>. It does not matter where this
+file is on your computer, but keep track of the location so that you can turn
+it in.</li>
+<li>When the time is up, upload your <tt class="docutils literal">solutions.py</tt> file to Google Classroom.</li>
+</ol>
+</div>
+<div class="section" id="grading">
+<h1>Grading</h1>
+<p>Your assessment will be graded based on the examples given.</p>
+<p>One point will be awarded for each problem that is correctly solved.</p>
+<p>Each problem includes sample output from an interactive Python session (i.e.
+running the <tt class="docutils literal">python</tt> command from your terminal). If the examples for each
+problem can be run, and the correct output produced, you will receive credit for
+the problem.</p>
+<p>No partial credit will be awarded, and no credit is given if the function is
+misnamed, or if the function does not run (i.e. it produces an error when we try
+to run it).</p>
+</div>
+<div class="section" id="problems">
+<h1>Problems</h1>
+<ol class="arabic">
+<li><p class="first">Write a function named <tt class="docutils literal">isnegative</tt>. It should accept a number and return a
+boolean value based on whether the input is negative.</p>
+<blockquote>
+<pre class="doctest-block">
+&gt;&gt;&gt; from solutions import isnegative
+&gt;&gt;&gt; type(isnegative(0))
+&lt;class 'bool'&gt;
+&gt;&gt;&gt; isnegative(4)
+False
+&gt;&gt;&gt; isnegative(0)
+False
+&gt;&gt;&gt; isnegative(-6)
+True
+</pre>
+</blockquote>
+</li>
+<li><p class="first">Write a function named <tt class="docutils literal">count_evens</tt>. It should accept a list and return the
+number of even numbers in the list.</p>
+<blockquote>
+<pre class="doctest-block">
+&gt;&gt;&gt; from solutions import count_evens
+&gt;&gt;&gt; type(count_evens([1, 2, 3]))
+&lt;class 'int'&gt;
+&gt;&gt;&gt; count_evens([1, 2, 3])
+1
+&gt;&gt;&gt; count_evens([4, 6, 8, 10, 12])
+5
+&gt;&gt;&gt; count_evens([1, 3, 5, 7, 9])
+0
+&gt;&gt;&gt; count_evens([])
+0
+&gt;&gt;&gt; count_evens([3, 2])
+1
+</pre>
+</blockquote>
+</li>
+<li><p class="first">Write a function named <tt class="docutils literal">increment_odds</tt>. It should accept a list of numbers
+and return a new list with the odd numbers from the original list
+incremented.</p>
+<blockquote>
+<pre class="doctest-block">
+&gt;&gt;&gt; from solutions import increment_odds
+&gt;&gt;&gt; type(increment_odds([1, 2, 3]))
+&lt;class 'list'&gt;
+&gt;&gt;&gt; increment_odds([1, 2, 3])
+[2, 2, 4]
+&gt;&gt;&gt; increment_odds([2, 2, 1, 4, 5])
+[2, 2, 2, 4, 6]
+&gt;&gt;&gt; increment_odds([])
+[]
+&gt;&gt;&gt; increment_odds([0, 1])
+[0, 2]
+</pre>
+</blockquote>
+</li>
+<li><p class="first">Write a function named <tt class="docutils literal">average</tt>. It should accept a list of numbers and
+return the mean of the numbers.</p>
+<blockquote>
+<pre class="doctest-block">
+&gt;&gt;&gt; from solutions import average
+&gt;&gt;&gt; type(average([1, 2, 3]))
+&lt;class 'float'&gt;
+&gt;&gt;&gt; average([1, 2, 3])
+2.0
+&gt;&gt;&gt; average([4, 6, 8, 10, 12])
+8.0
+&gt;&gt;&gt; average([1, 2])
+1.5
+</pre>
+</blockquote>
+</li>
+<li><p class="first">Create a function named <tt class="docutils literal">name_to_dict</tt>. It should accept a string that is a
+first name and last name separated by a space, and return a dictionary with
+<tt class="docutils literal">first_name</tt> and <tt class="docutils literal">last_name</tt> keys.</p>
+<blockquote>
+<pre class="doctest-block">
+&gt;&gt;&gt; from solutions import name_to_dict
+&gt;&gt;&gt; type(name_to_dict('Ada Lovelace'))
+&lt;class 'dict'&gt;
+&gt;&gt;&gt; name_to_dict('Ada Lovelace')
+{'first_name': 'Ada', 'last_name': 'Lovelace'}
+&gt;&gt;&gt; name_to_dict('Marie Curie')
+{'first_name': 'Marie', 'last_name': 'Curie'}
+</pre>
+</blockquote>
+</li>
+<li><p class="first">Write a function named <tt class="docutils literal">capitalize_names</tt>. It should accept a list of
+dictionaries where each dictionary represents a person and has keys
+<tt class="docutils literal">first_name</tt> and <tt class="docutils literal">last_name</tt>. It should return a list of dictionaries
+with each person's name capitalized.</p>
+<blockquote>
+<pre class="doctest-block">
+&gt;&gt;&gt; from solutions import capitalize_names
+&gt;&gt;&gt; names = []
+&gt;&gt;&gt; names.append({'first_name': 'ada', 'last_name': 'lovelace'})
+&gt;&gt;&gt; names.append({'first_name': 'marie', 'last_name': 'curie'})
+&gt;&gt;&gt; names
+[{'first_name': 'ada', 'last_name': 'lovelace'}, {'first_name': 'marie', 'last_name': 'curie'}]
+&gt;&gt;&gt; type(names)
+&lt;class 'list'&gt;
+&gt;&gt;&gt; capitalize_names(names)
+[{'first_name': 'Ada', 'last_name': 'Lovelace'}, {'first_name': 'Marie', 'last_name': 'Curie'}]
+&gt;&gt;&gt; type(capitalize_names(names))
+&lt;class 'list'&gt;
+</pre>
+</blockquote>
+</li>
+<li><p class="first">Write a function named <tt class="docutils literal">count_vowels</tt>. It should accept a word and return a
+number that is the number of vowels in the given word. &quot;y&quot; should not count
+as a vowel.</p>
+<blockquote>
+<pre class="doctest-block">
+&gt;&gt;&gt; from solutions import count_vowels
+&gt;&gt;&gt; type(count_vowels('codeup'))
+&lt;class 'int'&gt;
+&gt;&gt;&gt; count_vowels('codeup')
+3
+&gt;&gt;&gt; count_vowels('abcde')
+2
+&gt;&gt;&gt; count_vowels('why')
+0
+</pre>
+</blockquote>
+</li>
+<li><p class="first">Write a function named <tt class="docutils literal">analyze_word</tt>. It should accept a string that is a
+word and return a dictionary with information about the word: the total
+number of characters in the word, the original word, and the number of vowels
+in the word.</p>
+<blockquote>
+<pre class="doctest-block">
+&gt;&gt;&gt; from solutions import analyze_word
+&gt;&gt;&gt; type(analyze_word('codeup'))
+&lt;class 'dict'&gt;
+&gt;&gt;&gt; analyze_word('codeup')
+{'word': 'codeup', 'n_letters': 6, 'n_vowels': 3}
+&gt;&gt;&gt; analyze_word('abcde')
+{'word': 'abcde', 'n_letters': 5, 'n_vowels': 2}
+&gt;&gt;&gt; analyze_word('why')
+{'word': 'why', 'n_letters': 3, 'n_vowels': 0}
+</pre>
+</blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="hints">
+<h1>Hints</h1>
+<ul class="simple">
+<li>When a problem says <tt class="docutils literal">return</tt>, it means <tt class="docutils literal">return</tt>, not <tt class="docutils literal">print</tt>.</li>
+<li>When a problem says that a function will take in an input, then it means the
+function must be defined so that it takes in an argument as its input, rather
+than relying on variables defined outside the function.</li>
+<li>Points will only be awarded for a complete, correct function. This means it is
+better to have one completed function, rather than 8 half-finished ones.</li>
+<li>Run your code frequently to check for syntax errors.</li>
+<li>You can check to see if a problem is correct by running <tt class="docutils literal">python</tt> on your
+command line and testing the examples given.</li>
+</ul>
+</div>
+</div>
+</body>
+</html>
